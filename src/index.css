@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge, and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    }
+}
+
+.active .lnk {
+    color: white;
+}
+.active svg {
+    color: white;
+}
+
+@layer base {
+    th,
+    td {
+        @apply py-3 px-2.5 text-sm text-left border-y border-gray-200;
+    }
+    thead {
+        @apply bg-neutral-100;
+    }
+    th {
+        @apply font-semibold;
+    }
+    a {
+        @apply text-sky-500 hover:underline;
+    }
+}
